@@ -1,0 +1,75 @@
+[gd_scene load_steps=8 format=3 uid="uid://bxdr6vsh765bx"]
+
+[ext_resource type="PackedScene" uid="uid://fnl83ypym3ps" path="res://Platforms/PlatformLarge.tscn" id="1_lmkk4"]
+[ext_resource type="PackedScene" uid="uid://gfkq4pd3n34i" path="res://Coin.tscn" id="2_gat3x"]
+[ext_resource type="PackedScene" uid="uid://defhfavy74y57" path="res://Enemy.tscn" id="3_ekypm"]
+[ext_resource type="PackedScene" uid="uid://4q8tivyku31p" path="res://EndFlag.tscn" id="4_5hd4h"]
+[ext_resource type="PackedScene" uid="uid://bsit3bseycuvh" path="res://Player.tscn" id="5_4autw"]
+[ext_resource type="PackedScene" uid="uid://b2ok0tj5qh1oi" path="res://Spikes.tscn" id="6_8s3yw"]
+
+[sub_resource type="Environment" id="Environment_jca7s"]
+background_mode = 1
+background_color = Color(0.507973, 0.754674, 0.427083, 1)
+
+[node name="Main" type="Node3D"]
+
+[node name="PlatformLarge" parent="." instance=ExtResource("1_lmkk4")]
+
+[node name="PlatformLarge4" parent="." instance=ExtResource("1_lmkk4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.46179, -1.00189, -3.2293)
+
+[node name="PlatformLarge5" parent="." instance=ExtResource("1_lmkk4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.46179, -1.00189, 0.223036)
+
+[node name="PlatformLarge7" parent="." instance=ExtResource("1_lmkk4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.46179, 1.2543, 5.22606)
+
+[node name="PlatformLarge6" parent="." instance=ExtResource("1_lmkk4")]
+transform = Transform3D(1, 0, 0, 0, 0.791725, 0.610878, 0, -0.610878, 0.791725, -8.46179, 0.525442, 3.03128)
+
+[node name="PlatformLarge2" parent="." instance=ExtResource("1_lmkk4")]
+transform = Transform3D(0.684992, 0, 0.72855, 0, 1, 0, -0.72855, 0, 0.684992, -2.93921, -1.00189, -3.48572)
+
+[node name="PlatformLarge3" parent="." instance=ExtResource("1_lmkk4")]
+transform = Transform3D(0.684992, 0, 0.72855, 0, 1, 0, -0.72855, 0, 0.684992, -6.27965, -1.00189, -6.82354)
+
+[node name="Coin" parent="." instance=ExtResource("2_gat3x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.15455, 0, -6.6716)
+
+[node name="Coin2" parent="." instance=ExtResource("2_gat3x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.13045, 0, -3.31741)
+
+[node name="Coin3" parent="." instance=ExtResource("2_gat3x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.99745, 2.38419e-07, -2.94112)
+
+[node name="Coin4" parent="." instance=ExtResource("2_gat3x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.00435, 0, -0.422753)
+
+[node name="Coin5" parent="." instance=ExtResource("2_gat3x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.26849, 1.44533, 2.54353)
+
+[node name="Enemy" parent="." instance=ExtResource("3_ekypm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.29578, -0.684349, -1.82417)
+
+[node name="Enemy2" parent="." instance=ExtResource("3_ekypm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.67754, -0.684349, -1.76197)
+
+[node name="EndFlag" parent="." instance=ExtResource("4_5hd4h")]
+transform = Transform3D(-0.0980697, 0, 0.995179, 0, 1, 0, -0.995179, 0, -0.0980697, -8.61024, 2.20116, 5.24839)
+next_scene = "res://Level1.tscn"
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.609642, -0.689347, 0.391328, -0.244466, 0.633122, 0.734434, -0.754038, 0.352075, -0.5545, -8.61024, 5.56631, 5.24839)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_jca7s")
+
+[node name="Player" parent="." instance=ExtResource("5_4autw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0647659, -0.0131205, 0.320352)
+
+[node name="Spikes" parent="." instance=ExtResource("6_8s3yw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.39412, -2.38419e-07, -3.07198)
+
+[node name="Spikes2" parent="." instance=ExtResource("6_8s3yw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.36665, -2.38419e-07, 0.314971)

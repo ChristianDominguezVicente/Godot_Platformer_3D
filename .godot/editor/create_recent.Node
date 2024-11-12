@@ -1,0 +1,8 @@
+CollisionShape3D
+Area3D
+Label
+WorldEnvironment
+DirectionalLight3D
+Camera3D
+CharacterBody3D
+StaticBody3D
